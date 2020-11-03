@@ -9,7 +9,7 @@ app.get('/rooms', (req, res) => {
 });
 
 io.on('connection', socket => {
-    console.log('user connected', socket)
+    console.log('user connected', socket.id)
 })
 
 http.listen(9999, (err) => {
