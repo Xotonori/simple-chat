@@ -1,9 +1,10 @@
 import React from 'react';
-import { memo } from 'react';
+import {memo} from 'react';
+import classes from './Input.module.scss';
 
-export const Input = memo(({type, placeholder, className}: InputPropsType) => {
+export const Input = memo(({type, placeholder}: InputPropsType) => {
     return (
-        <input type={type} placeholder={placeholder} className={className}/>
+        <input type={type} placeholder={placeholder} className={classes.Input}/>
     );
 });
 
@@ -11,5 +12,4 @@ export const Input = memo(({type, placeholder, className}: InputPropsType) => {
 type InputPropsType = {
     type: string,
     placeholder: string,
-    className: string
 }
