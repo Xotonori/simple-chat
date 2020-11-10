@@ -1,14 +1,13 @@
 .App {
   display: flex;
-  justify-items: center;
-  align-items: center;
+  justify-content: center;
 
   .roomForm {
     display: flex;
     flex-direction: column;
     width: 300px;
     padding: 15px;
-    border: 1px solid #000;
+    border: 1px solid #000000;
   }
 }
 

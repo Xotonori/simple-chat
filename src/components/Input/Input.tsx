@@ -1,5 +1,6 @@
 import React from 'react';
 import {memo} from 'react';
+// @ts-ignore
 import classes from './Input.module.scss';
 
 export const Input = memo(({type, placeholder}: InputPropsType) => {
