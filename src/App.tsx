@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import {PageRenderer} from "./render-page";
 
 function App() {
@@ -8,8 +8,9 @@ function App() {
     <div className="App">
         <BrowserRouter>
             <Switch>
-                <Route path={'/:page'} component={PageRenderer}></Route>
-                {/*<Route path={'/404'} component={Page404}></Route>*/}
+                <Route path={'/:page'} component={PageRenderer}/>
+                {/*<Route path={'/404'} component={PageRenderer}/>*/}
+                {/*<Route path='*' render={() => <Redirect to='/404'/>}/>*/}
             </Switch>
         </BrowserRouter>
     </div>

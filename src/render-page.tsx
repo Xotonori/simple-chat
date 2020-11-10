@@ -8,8 +8,8 @@ const generatePage = (page: string) => {
         return React.createElement(component())
     } catch (err) {
         console.warn(err);
-        // @ts-ignore
-        return React.createElement(() => 404)
+        page = '404';
+        return React.createElement(component())
     }
 }
 
