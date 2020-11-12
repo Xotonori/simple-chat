@@ -1,7 +1,9 @@
 import React, {memo} from 'react'
-import {Input} from "../components/Input/Input";
+import {Input} from "../../components/Input/Input";
+import classes from './sign-in.module.scss'
 // @ts-ignore
 import io from 'socket.io-client';
+import {Button} from "../../components/Button/Button";
 
 const SignIn = memo(props => {
 
@@ -10,11 +12,11 @@ const SignIn = memo(props => {
     }
 
     return(
-        <div className={'FormWrapper'}>
-            <form action="" className='roomForm'>
+        <div className={classes.formWrapper}>
+            <form action="" className={classes.roomForm}>
                 <Input type="text" placeholder='Room ID'/>
                 <Input type="text" placeholder='Your Name'/>
-                <button onClick={connectSocket}>CONNECT</button>
+                <Button onClick={connectSocket}/>
             </form>
         </div>
     );

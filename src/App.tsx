@@ -9,8 +9,7 @@ function App() {
         <BrowserRouter>
             <Switch>
                 <Route path={'/:page'} component={PageRenderer}/>
-                {/*<Route path={'/404'} component={PageRenderer}/>*/}
-                {/*<Route path='*' render={() => <Redirect to='/404'/>}/>*/}
+                <Route path={'/'} render={()=><Redirect to={'/sign-in'}/>}/>
             </Switch>
         </BrowserRouter>
     </div>

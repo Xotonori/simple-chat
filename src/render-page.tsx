@@ -2,7 +2,7 @@ import React from "react";
 import {useRouteMatch} from "react-router";
 
 const generatePage = (page: string) => {
-    const component = () => require(`./pages/${page}.tsx`).default;
+    const component = () => require(`./pages/${page}/${page}.tsx`).default;
 
     try {
         return React.createElement(component())
